@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --DARK-BLUE: rgb(58, 139, 220);
+    --MID-BLUE: rgb(77, 166, 255);
+    --LIGHT-BLUE: rgb(112, 183, 255);
+    --GREEN:
+}
+
+input,
+button {
+    font: inherit;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--DARK-BLUE);
+    color: white;
+    margin: 40px 0 100px 0;
+}
+
+/* BUTTON STYLING */
+
+button {
+    color: white;
+    background-color: rgb(68, 203, 68);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--LIGHT-BLUE);
+}
+
+button:hover {
+    background-color: rgb(68, 221, 68);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(92, 236, 92);
+}
+
+/* HR STYLING */
+
+hr {
+    margin: 30px 20px;
+    border: 2px solid var(--LIGHT-BLUE);
+}
+
+/* -- HEADER -- */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    height: 57px;
+    padding: 25px 50px;
+    border-radius: 15px;
+    background-color: var(--MID-BLUE);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+h1:hover {
+    background-color: var(--LIGHT-BLUE);
+    cursor: pointer;
+}
+
+h1:active::after {
+    content: " 🧠";
+}
+
+h1:active::before {
+    content: "🧠 ";
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.6rem;
+        height: auto;
+        padding: 20px 30px;
+    }
+}
+
+/* -- FORM -- */
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="number"] {
+    width: 90vw;
+    height: 30px;
+    padding: 2px 8px;
+    border: 2px solid var(--LIGHT-BLUE);
+    border-radius: 5px;
+    font: inherit;
+}
+
+/* -- NUMBER INFO */
+
+.number-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.number-info .current-number {
+    max-width: 90vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* -- NUMBER GRID -- */
+
+.number-grid {
+    margin: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(60px, 160px));
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+.number-element {
+    aspect-ratio: 1;
+    background-color: var(--LIGHT-BLUE);
+    border: 3px solid var(--MID-BLUE);
+    border-radius: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-element:hover {
+    background-color: var(--MID-BLUE);
+}
+
+.number-element#zero {
+    order: 9;
+    grid-column: 2;
+}
+
+.number-element.active {
+    background-color: rgb(218, 246, 36);
+    color: #333;
+}
+
+.number-element.active:hover {
+    background-color: rgb(206, 232, 34)
+}
+
+#next-btn {
+    display: block;
+    font-size: 2rem;
+    margin: 30px auto 0 auto;
+}
+
+/* -- FOOTER -- */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
