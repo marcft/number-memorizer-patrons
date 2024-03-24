@@ -4,30 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="behaviour.js" defer></script>
     <title>Toni's π memorizer</title>
 </head>
 
 <body>
-    <h1>Toni's <strong>π</strong> memorizer</h1>
-    <form>
-        <input type="number">
-        <button type="button">Introduce</button>
-    </form>
-    <p class="current-number"></p>
-    <button>Reset</button>
-    <div class="number-grid">
-        <div class="number-element zero">0</div>
-        <div class="number-element one">1</div>
-        <div class="number-element two">2</div>
-        <div class="number-element three">3</div>
-        <div class="number-element four">4</div>
-        <div class="number-element five">5</div>
-        <div class="number-element six">6</div>
-        <div class="number-element seven">7</div>
-        <div class="number-element eight">8</div>
-        <div class="number-element nine">9</div>
-    </div>
-    <button>Next &#9658;</button>
+    <header>
+        <h1>Toni's <strong>π</strong> memorizer</h1>
+    </header>
+    <main>
+        <form>
+            <input type="number">
+            <button id="introduce-btn" type="submit">Introduce</button>
+        </form>
+        <hr>
+        <div class="number-info">
+            <p class="current-number">NO CURRENT NUMBER</p>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <hr>
+        <div class="number-grid">
+            <div class="number-element" id="zero">0</div>
+            <div class="number-element" id="one">1</div>
+            <div class="number-element" id="two">2</div>
+            <div class="number-element" id="three">3</div>
+            <div class="number-element" id="four">4</div>
+            <div class="number-element" id="five">5</div>
+            <div class="number-element" id="six">6</div>
+            <div class="number-element" id="seven">7</div>
+            <div class="number-element" id="eight">8</div>
+            <div class="number-element" id="nine">9</div>
+        </div>
+        <button id="next-btn">Next &#9658;</button>
+    </main>
+    <footer>
+        <p>Made by Marc Frances</p>
+    </footer>
 </body>
 
 </html>
