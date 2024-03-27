@@ -47,76 +47,27 @@ nextBtn.addEventListener('click', (e) => {
   }
 });
 
+const gridElements = {
+  0: document.document.getElementById('zero'),
+  1: document.document.getElementById('one'),
+  2: document.document.getElementById('two'),
+  3: document.document.getElementById('three'),
+  4: document.document.getElementById('four'),
+  5: document.document.getElementById('five'),
+  6: document.document.getElementById('six'),
+  7: document.document.getElementById('seven'),
+  8: document.document.getElementById('eight'),
+  9: document.document.getElementById('nine'),
+};
+
 function setGridElementActive(digit) {
-  switch (digit) {
-    case '0':
-      const zero = document.getElementById('zero');
-      removeAllActive();
-      zero.classList.add('active');
-      break;
-
-    case '1':
-      const one = document.getElementById('one');
-      removeAllActive();
-      one.classList.add('active');
-      break;
-
-    case '2':
-      const two = document.getElementById('two');
-      removeAllActive();
-      two.classList.add('active');
-      break;
-
-    case '3':
-      const three = document.getElementById('three');
-      removeAllActive();
-      three.classList.add('active');
-      break;
-
-    case '4':
-      const four = document.getElementById('four');
-      removeAllActive();
-      four.classList.add('active');
-      break;
-
-    case '5':
-      const five = document.getElementById('five');
-      removeAllActive();
-      five.classList.add('active');
-      break;
-
-    case '6':
-      const six = document.getElementById('six');
-      removeAllActive();
-      six.classList.add('active');
-      break;
-
-    case '7':
-      const seven = document.getElementById('seven');
-      removeAllActive();
-      seven.classList.add('active');
-      break;
-
-    case '8':
-      const eight = document.getElementById('eight');
-      removeAllActive();
-      eight.classList.add('active');
-      break;
-
-    case '9':
-      const nine = document.getElementById('nine');
-      removeAllActive();
-      nine.classList.add('active');
-      break;
-
-    default:
-      alert('Avisar a Marc');
-      throw new Error('Not a number');
+  const element = gridElements[digit];
+  if (!element) {
+    alert('Avisar a Marc');
+    throw new Error('Digit does not correspond with any grid element');
   }
-
-  function removeAllActive() {
-    for (let i = 0; i < grid.children.length; i++) {
-      grid.children[i].classList.remove('active');
-    }
+  for (let i = 0; i < grid.children.length; i++) {
+    grid.children[i].classList.remove('active');
   }
+  element.classList.add('active');
 }
