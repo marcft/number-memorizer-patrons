@@ -127,6 +127,17 @@ input[type="number"] {
     white-space: nowrap;
 }
 
+.current-number.hide {
+    background-color: var(--LIGHT-BLUE);
+    color: var(--LIGHT-BLUE);
+    user-select: none;
+}
+
+.number-info .info-btn-container {
+    display: flex;
+    gap: 30px;
+}
+
 /* -- NUMBER GRID -- */
 
 .number-grid {

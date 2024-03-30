@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="behaviour.js" defer></script>
+    <script src="behaviour.js" type="module" defer></script>
     <title>Toni's π memorizer</title>
 </head>
 
@@ -21,7 +21,10 @@
         <hr>
         <div class="number-info">
             <p class="current-number">NO CURRENT NUMBER</p>
-            <button id="reset-btn">Reset</button>
+            <div class="info-btn-container">
+                <button id="reset-btn">Reset</button>
+                <button id="hide-btn">Hide</button>
+            </div>
         </div>
         <hr>
         <div class="number-grid">
