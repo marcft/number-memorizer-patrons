@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
   currentNumber = fullNumber;
 
   if (currentNumber.length <= 0) {
-    alert("Introduce algún número");
+    alert("Introduce a number");
     return;
   }
   numberInput.value = "";
@@ -69,10 +69,10 @@ gridElements.forEach((element) => {
 
 function previousChecks() {
   if (currentNumber === undefined) {
-    alert("Introduzca un numero");
+    alert("Introduce a number");
     return false;
   } else if (currentNumber.length <= 0) {
-    alert("Último número de la secuencia");
+    alert("Last digit of the sequence");
     return false;
   }
 
